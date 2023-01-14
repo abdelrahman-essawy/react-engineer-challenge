@@ -5,16 +5,17 @@ export const searchFilterReducer = (state, action) => {
                 ...state,
                 keyword: action.payload,
             };
-        case 'SET_GENRE':
-            return {
-                ...state,
-                genre: [...state.genre, action.payload],
-            };
         case 'SET_RATING':
             return {
                 ...state,
-                rating: [...state.rating, action.payload],
+                rating: action.payload,
             };
+        case 'SET_GENRE':
+            return {
+                ...state,
+                genre: action.payload,
+            };
+
         default:
             return state;
     }

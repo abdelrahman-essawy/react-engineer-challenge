@@ -10,6 +10,7 @@ export default function SearchResults() {
 
     const { state } = useMoviesContext();
     const [movies, setMovies] = useState([]);
+    
     useEffect(() => {
         setMovies(state.movies);
     }, [state]);

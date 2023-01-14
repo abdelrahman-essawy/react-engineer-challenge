@@ -3,11 +3,12 @@ import { useSearchFilterContext } from '../../../context/hooks/useSearchFilterCo
 import Border from '../../utilities/Border';
 import Stars from '../../utilities/Stars';
 
-export default function SearchResult({ movies, state }) {
+export default function SearchResult({ movies }) {
 
+  console.log(movies);
   const { state: searchFilterState } = useSearchFilterContext();
 
-  const { keyword } = searchFilterState;
+  const { keyword, genre, rating } = searchFilterState;
   return (
     <div>
       <div className={`col-span-1 ${keyword ? `block` : `hidden`}`}>
@@ -16,6 +17,7 @@ export default function SearchResult({ movies, state }) {
             {
               movies
                 .filter(({ title }) => title.toLowerCase().includes(keyword.toLowerCase()))
+                .filter(({ rating }) => rating >= searchFilterState.rating)
                 .map(({ title, genre, id, rating }) => (
                   <div
                     key={id}
