@@ -17,13 +17,15 @@ export default function Rating() {
                         [...Array(11)].map((_, i) => (
                             <div
                                 key={i}
-                                className="flex flex-row items-center gap-3 md:gap-2 lg:gap-4">
+                                className="flex flex-row items-center gap-3 md:gap-2 lg:gap-4 ">
                                 <input
+                                    name='Ratings'
+                                    id={`Rating ${i}`}
                                     onChange={(event) => {
                                         searchFilterDispatch({ type: 'SET_RATING', payload: event.target.value });
                                     }}
-                                    type="radio" name='Ratings' className="w-4 h-4 cursor-pointer accent-black" value={i} defaultChecked={i === 0 ? true : false} />
-                                <span className="flex-1"><StarRating rating={i} /></span>
+                                    type="radio" className="w-4 h-4 cursor-pointer accent-black" value={i} defaultChecked={i === 0 ? true : false} />
+                                <label htmlFor={`Rating ${i}`} className="flex-1 cursor-pointer"><StarRating rating={i} /></label>
                             </div>
                         ))
                     }

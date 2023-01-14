@@ -26,11 +26,13 @@ export default function Genre() {
                     key={id}
                     className="flex flex-row items-center gap-3 md:gap-2 lg:gap-4">
                     <input
+                      name='Genres'
+                      id={`Genre ${id}`}
                       onChange={(event) => {
                         searchFilterDispatch({ type: 'SET_GENRE', payload: event.target.value });
                       }}
-                      type="radio" name='Genres' className="w-4 h-4 cursor-pointer accent-black" value={genre} defaultChecked={genre === 'Any genre' ? true : false} />
-                    <span className="flex-1">{genre}</span>
+                      type="radio" className="w-4 h-4 cursor-pointer accent-black" value={genre} defaultChecked={genre === 'Any genre' ? true : false} />
+                    <label htmlFor={`Genre ${id}`} className="flex-1 cursor-pointer">{genre}</label>
                   </div>
                 ))
             }
