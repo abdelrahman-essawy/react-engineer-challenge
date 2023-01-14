@@ -17,9 +17,10 @@ const Search = () => {
                 dispatch({ type: 'FETCH_MOVIES', payload: data });
             })
             .catch(error => {
-                console.log(error);
+                console.log('error' + error);
             });
     }, []);
+
 
 
     return (
