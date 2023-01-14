@@ -16,4 +16,4 @@ export const toggleReducer = (state, action) => {
         default:
             return state;
     }
-};
+}

@@ -1,22 +1,17 @@
 import { createContext, useReducer } from 'react';
-import { toggleReducer } from './reducers/toggleReducer';
-
-
+import { searchFilterReducer } from './reducers/searchFilterReducer';
 
 export const SearchFilterContext = createContext();
 
 export const SearchFilterProvider = ({ children }) => {
 
-    const [state, dispatch] = useReducer(toggleReducer, {
+    const [state, dispatch] = useReducer(searchFilterReducer, {
         keyword: ``,
         rating: 0,
         genre: ``,
     });
+    return <SearchFilterContext.Provider value={{ state, dispatch }}>
+        {children}
+    </SearchFilterContext.Provider>
 
-
-    return (
-        <SearchFilterProvider.Provider value={{ state, dispatch }}>
-            {children}
-        </SearchFilterProvider.Provider>
-    );
 }

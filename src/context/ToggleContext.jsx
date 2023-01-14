@@ -1,8 +1,6 @@
 import { createContext, useReducer } from 'react';
 import { toggleReducer } from './reducers/toggleReducer';
 
-
-
 export const ToggleContext = createContext();
 
 export const ToggleProvider = ({ children }) => {
@@ -11,11 +9,8 @@ export const ToggleProvider = ({ children }) => {
         rating: false,
         genre: false,
     });
+    return <ToggleContext.Provider value={{ state, dispatch }}>
+        {children}
+    </ToggleContext.Provider>
 
-
-    return (
-        <ToggleContext.Provider value={{ state, dispatch }}>
-            {children}
-        </ToggleContext.Provider>
-    );
 }

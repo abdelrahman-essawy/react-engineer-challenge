@@ -1,4 +1,4 @@
-const searchFilterReducer = (state, action) => {
+export const searchFilterReducer = (state, action) => {
     switch (action.type) {
         case 'SET_KEYWORD':
             return {
@@ -20,4 +20,3 @@ const searchFilterReducer = (state, action) => {
     }
 };
 
-export default searchFilterReducer;
