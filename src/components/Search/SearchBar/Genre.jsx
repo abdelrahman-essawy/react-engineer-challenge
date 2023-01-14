@@ -4,12 +4,11 @@ import SearchToggler from "../../utilities/SearchToggler";
 
 
 const Genre = () => {
-    const { state, dispatch } = useToggleContext();
-
+    const { state: toggleState, dispatch: toggleDispatch } = useToggleContext();
 
     return <SearchToggler
-        state={state.genre}
-        dispatch={dispatch}
+        state={toggleState.genre}
+        dispatch={toggleDispatch}
         action="CLICK_GENRE"
         className="col-span-1">Genre</SearchToggler>;
 };

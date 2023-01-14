@@ -8,12 +8,12 @@ export const searchFilterReducer = (state, action) => {
         case 'SET_GENRE':
             return {
                 ...state,
-                genre: action.payload,
+                genre: [...state.genre, action.payload],
             };
         case 'SET_RATING':
             return {
                 ...state,
-                rating: action.payload,
+                rating: [...state.rating, action.payload],
             };
         default:
             return state;

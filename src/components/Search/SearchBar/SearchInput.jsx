@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { useMoviesContext } from "../../../context/hooks/useMoviesContext";
+import { useSearchFilterContext } from "../../../context/hooks/useSearchFilterContext";
 import Border from "../../utilities/Border";
 
 const SearchInput = () => {
-    const [searchKeyword, setSearchKeyword] = useState("");
+    const { dispatch } = useSearchFilterContext();
 
     return (
         <Border>
             <input
-                onChange={(e) => setSearchKeyword(e.target.value)}
+                onChange={(event) => {
+                    dispatch({ type: 'SET_KEYWORD', payload: event.target.value });
+                }}
                 placeholder="Enter movie name"
                 className="outline-none w-full"
-                value={searchKeyword}
             />
         </Border>
     );
