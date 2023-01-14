@@ -8,7 +8,7 @@ export default function Genre() {
     <>
       <div></div>
       <div className={`col-span-1 ${state.genre ? `block` : `hidden`}`}>
-        <Border className="px-4 py-3">
+        <Border>
           <div className='flex flex-col gap-2'>
             {
               [...Array(11)].map((_, i) => (

@@ -9,7 +9,7 @@ export default function Rating() {
     return (
 
         <div className={`col-span-2 ${state.rating ? `block` : `hidden`}`}>
-            <Border className="px-4 py-3">
+            <Border>
                 <div className='flex flex-col gap-2'>
                     {
                         [...Array(11)].map((_, i) => (

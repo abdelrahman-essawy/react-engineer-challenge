@@ -13,7 +13,7 @@ const SearchToggler = ({ children, className, state, dispatch, action }) => {
             <Border className="col-span-2 md:col-span-1">
                 <button
                     onClick={handClick}
-                    className={`flex items-center justify-around w-full focus:outline-none px-4 py-3 ${className}`}
+                    className={`flex items-center justify-around w-full focus:outline-none  ${className}`}
                 >
                     <span>{children}</span>
                     <span

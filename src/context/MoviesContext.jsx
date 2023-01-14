@@ -9,9 +9,14 @@ export const MoviesProvider = ({ children }) => {
 
 
     const [state, dispatch] = useReducer(moviesReducer, {
-        movies: [],
-        rating: 0,
-        genre: '',
+        movies: [
+            {
+                id:0,
+                title: ``,
+                rating: 0,
+                genre: ``,
+            }
+        ]
     });
 
     return (

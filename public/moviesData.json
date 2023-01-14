@@ -1,27 +1,32 @@
 [
     {
-        "Title": "The Matrix",
-        "Rating": 7.5,
-        "Category": "Action"
+        "id": 1,
+        "title": "The Matrix",
+        "rating": 7.5,
+        "genre": "Action"
     },
     {
-        "Title": "Focus",
-        "Rating": 6.9,
-        "Category": "Comedy"
+        "id": 2,
+        "title": "Focus",
+        "rating": 6.9,
+        "genre": "Comedy"
     },
     {
-        "Title": "The Lazarus Effect",
-        "Rating": 6.4,
-        "Category": "Thriller"
+        "id": 3,
+        "title": "The Lazarus Effect",
+        "rating": 6.4,
+        "genre": "Thriller"
     },
     {
-        "Title": "Everly",
-        "Rating": 5,
-        "Category": "Action"
+        "id": 4,
+        "title": "Everly",
+        "rating": 5,
+        "genre": "Action"
     },
     {
-        "Title": "Maps to the Stars",
-        "Rating": 7.5,
-        "Category": "Drama"
+        "id": 5,
+        "title": "Maps to the Stars",
+        "rating": 7.5,
+        "genre": "Drama"
     }
 ]
