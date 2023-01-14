@@ -1,4 +1,4 @@
-export const clickReducer = (state, action) => {
+export const toggleReducer = (state, action) => {
     switch (action.type) {
         case 'CLICK_RATING':
             return {

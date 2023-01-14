@@ -1,10 +1,10 @@
 import React from "react";
-import { useSearchContext } from "../../../context/useSearchContext";
+import { useToggleContext } from "../../../context/hooks/useToggleContext";
 import SearchToggler from "../../utilities/SearchToggler";
 
 
 const Genre = () => {
-    const { state, dispatch } = useSearchContext();
+    const { state, dispatch } = useToggleContext();
 
 
     return <SearchToggler

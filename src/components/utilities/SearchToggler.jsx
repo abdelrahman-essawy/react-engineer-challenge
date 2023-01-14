@@ -8,7 +8,6 @@ const SearchToggler = ({ children, className, state, dispatch, action }) => {
     };
 
 
-    console.log(action, state);
     return (
         <div className="grid gap-2 grid-cols-1">
             <Border className="col-span-2 md:col-span-1">

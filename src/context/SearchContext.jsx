@@ -1,15 +1,18 @@
 import { createContext, useReducer } from 'react';
-import { clickReducer } from './clickReducer';
+import { moviesReducer } from './reducers/moviesReducer';
 
 
-const initialState = {
-    rating: false,
-    genre: false,
-};
+
 export const SearchContext = createContext();
 
 export const SearchProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(clickReducer, initialState);
+
+
+    const [state, dispatch] = useReducer(moviesReducer, {
+        movies: [],
+        rating: 0,
+        genre: '',
+        });
 
     return (
         <SearchContext.Provider value={{ state, dispatch }}>

@@ -1,11 +1,14 @@
 import React from 'react'
+import { useToggleContext } from '../../../context/hooks/useToggleContext';
 import Border from '../../utilities/Border'
 import Stars from '../../utilities/Stars'
 
 export default function Rating() {
+
+    const { state, dispatch } = useToggleContext();
     return (
 
-        <div className="col-span-2">
+        <div className={`col-span-2 ${state.rating ? `block` : `hidden`}`}>
             <Border className="px-4 py-3">
                 <div className='flex flex-col gap-2'>
                     {
