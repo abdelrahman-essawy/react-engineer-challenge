@@ -1,16 +1,17 @@
 import React from "react";
-import Border from "../../utilities/Border";
+import { useSearchContext } from "../../../context/useSearchContext";
 import SearchToggler from "../../utilities/SearchToggler";
-import Stars from "../../utilities/Stars";
+
+
+
 
 const Rating = () => {
-    return (
-        <>
-            <SearchToggler className="">
-                Rating
-            </SearchToggler>
-        </>
 
-    )
+    const { state, dispatch } = useSearchContext();
+    return <SearchToggler
+        state={state.rating}
+        dispatch={dispatch}
+        action="CLICK_RATING"
+        className="col-span-1">Rating</SearchToggler>;
 };
 export default Rating;

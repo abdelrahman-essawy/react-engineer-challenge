@@ -8,6 +8,9 @@ const Genre = () => {
 
 
     return <SearchToggler
+        state={state.genre}
+        dispatch={dispatch}
+        action="CLICK_GENRE"
         className="col-span-1">Genre</SearchToggler>;
 };
 export default Genre;

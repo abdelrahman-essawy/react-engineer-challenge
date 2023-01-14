@@ -1,18 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import Border from "./Border";
 
-const SearchToggler = ({ children, className }) => {
-    const [isClicked, setIsClicked] = useState(false);
+const SearchToggler = ({ children, className, state, dispatch, action }) => {
+
+    const handClick = () => {
+        dispatch({ type: action });
+    };
+
+
+    console.log(action, state);
     return (
         <div className="grid gap-2 grid-cols-1">
             <Border className="col-span-2 md:col-span-1">
                 <button
-                    onClick={() => setIsClicked((prev) => !prev)}
+                    onClick={handClick}
                     className={`flex items-center justify-around w-full focus:outline-none px-4 py-3 ${className}`}
                 >
                     <span>{children}</span>
                     <span
-                        className={`transform ${isClicked ? `rotate-0` : `rotate-180`} `}
+                        className={`transform ${state ? `rotate-0` : `rotate-180`} `}
                     >
                         <svg
                             width="16"
