@@ -59,13 +59,12 @@ export default function Stars({ rating }) {
 140 64 12 148 13 211 1z" />
             </g>
         </svg>
-        const stars = Array(10).fill(white)
-        stars.fill(black, 0, rating)
+        const stars = Array(10).fill().map((_, i) => <div key={i}>{i < rating ? black : white}</div>);
+
 
         return stars
 
     }
-
     return (
         <div>
 

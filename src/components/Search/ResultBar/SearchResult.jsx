@@ -3,12 +3,7 @@ import { useMoviesContext } from '../../../context/hooks/useMoviesContext';
 import Border from '../../utilities/Border';
 import Stars from '../../utilities/Stars';
 
-export default function SearchResult() {
-  const { state } = useMoviesContext();
-  const [movies, setMovies] = useState([]);
-  useEffect(() => {
-    setMovies(state.movies);
-  }, [state]);
+export default function SearchResult({ movies, state}) {
 
 
   return (

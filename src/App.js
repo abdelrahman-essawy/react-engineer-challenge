@@ -1,6 +1,7 @@
 import React from 'react';
 import Search from './components/Search';
 import { MoviesProvider } from './context/MoviesContext';
+import { SearchFilterProvider } from './context/SearchFilterContext';
 import { ToggleProvider } from './context/ToggleContext';
 
 function App() {

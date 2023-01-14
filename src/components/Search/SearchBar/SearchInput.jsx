@@ -4,7 +4,6 @@ import Border from "../../utilities/Border";
 
 const SearchInput = () => {
     const [searchKeyword, setSearchKeyword] = useState("");
-    const { state } = useMoviesContext();
 
     return (
         <Border>
@@ -14,7 +13,6 @@ const SearchInput = () => {
                 className="outline-none w-full"
                 value={searchKeyword}
             />
-            {searchKeyword}
         </Border>
     );
 };
