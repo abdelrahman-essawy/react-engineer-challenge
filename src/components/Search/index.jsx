@@ -1,20 +1,23 @@
 import React from "react";
-
 import SearchBar from "./SearchBar";
 import SearchResults from "./ResultBar";
+import { SearchProvider } from "../../context/SearchContext";
+
 
 const Search = () => {
+
     return (
-        <div className="px-4 md:px-2 grid gap-2">
-            <div>
-                <SearchBar />
+        <SearchProvider>
+            <div className="px-4 md:px-2 grid gap-2">
+                <div>
+                    <SearchBar />
+                </div>
+                <div>
+                    <SearchResults />
+                </div>
             </div>
-            <div>
-                <SearchResults />
-            </div>
+        </SearchProvider>
 
-
-        </div>
     );
 };
 export default Search;
