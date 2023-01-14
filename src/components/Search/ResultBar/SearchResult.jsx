@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React  from 'react'
 import { useSearchFilterContext } from '../../../context/hooks/useSearchFilterContext';
 import Border from '../../utilities/Border';
 import Stars from '../../utilities/Stars';
@@ -7,7 +7,7 @@ export default function SearchResult({ movies }) {
 
   const { state: searchFilterState } = useSearchFilterContext();
 
-  const { keyword, genre, rating } = searchFilterState;
+  const { keyword } = searchFilterState;
   return (
     <div>
       <div className={`col-span-1 ${keyword ? `block` : `hidden`}`}>

@@ -5,9 +5,9 @@ import { useToggleContext } from '../../../context/hooks/useToggleContext';
 import Border from '../../utilities/Border';
 
 export default function Genre() {
-  const { state: toggleState, dispatch: toggleDispatch } = useToggleContext();
-  const { state: moviesState, dispatch: moviesDispatch } = useMoviesContext();
-  const { state, dispatch: searchFilterDispatch } = useSearchFilterContext();
+  const { state: toggleState } = useToggleContext();
+  const { state: moviesState } = useMoviesContext();
+  const { dispatch: searchFilterDispatch } = useSearchFilterContext();
 
   const { movies } = moviesState;
 

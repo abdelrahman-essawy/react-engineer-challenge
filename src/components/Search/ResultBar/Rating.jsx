@@ -6,8 +6,8 @@ import Stars from '../../utilities/Stars'
 
 export default function Rating() {
 
-    const { state, dispatch: searchFilterDispatch } = useSearchFilterContext();
-    const { state: toggleState, dispatch: toggleDispatch } = useToggleContext();
+    const { dispatch: searchFilterDispatch } = useSearchFilterContext();
+    const { state: toggleState } = useToggleContext();
 
     return (
         <div className={`col-span-2 ${toggleState.rating ? `block` : `hidden`}`}>

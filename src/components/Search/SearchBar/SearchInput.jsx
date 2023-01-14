@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useSearchFilterContext } from "../../../context/hooks/useSearchFilterContext";
 import Border from "../../utilities/Border";
 

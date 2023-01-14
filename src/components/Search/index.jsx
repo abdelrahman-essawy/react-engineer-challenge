@@ -1,25 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import SearchBar from "./SearchBar";
 import SearchResults from "./ResultBar";
-import { MoviesProvider } from "../../context/MoviesContext";
-import { ToggleProvider } from "../../context/ToggleContext";
 import { useMoviesContext } from "../../context/hooks/useMoviesContext";
 
 
 const Search = () => {
 
-    const { state, dispatch } = useMoviesContext()
+    const { dispatch: moviesDispatch } = useMoviesContext()
 
     useEffect(() => {
         fetch('./moviesData.json')
             .then(response => response.json())
             .then(data => {
-                dispatch({ type: 'FETCH_MOVIES', payload: data });
+                moviesDispatch({ type: 'FETCH_MOVIES', payload: data });
             })
             .catch(error => {
                 console.log('error' + error);
             });
-    }, []);
+    }, [moviesDispatch]);
 
 
 

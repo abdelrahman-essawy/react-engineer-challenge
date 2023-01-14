@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useMoviesContext } from '../../../context/hooks/useMoviesContext'
-import { ToggleProvider } from '../../../context/ToggleContext'
 import Genre from './Genre'
 import Rating from './Rating'
 import SearchResult from './SearchResult'
@@ -10,7 +9,7 @@ export default function SearchResults() {
 
     const { state } = useMoviesContext();
     const [movies, setMovies] = useState([]);
-    
+
     useEffect(() => {
         setMovies(state.movies);
     }, [state]);
