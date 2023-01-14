@@ -8,8 +8,7 @@ export default function Rating() {
 
     const { state, dispatch: searchFilterDispatch } = useSearchFilterContext();
     const { state: toggleState, dispatch: toggleDispatch } = useToggleContext();
-    
-    console.log(state);
+
     return (
         <div className={`col-span-2 ${toggleState.rating ? `block` : `hidden`}`}>
             <Border>
@@ -23,7 +22,7 @@ export default function Rating() {
                                     onChange={(event) => {
                                         searchFilterDispatch({ type: 'SET_RATING', payload: event.target.value });
                                     }}
-                                    type="checkbox" className="w-4 h-4 cursor-pointer" value={i} />
+                                    type="radio" name='Ratings' className="w-4 h-4 cursor-pointer accent-black" value={i} />
                                 <span className="flex-1"><Stars rating={i} /></span>
                             </div>
                         ))

@@ -5,7 +5,6 @@ import Stars from '../../utilities/Stars';
 
 export default function SearchResult({ movies }) {
 
-  console.log(movies);
   const { state: searchFilterState } = useSearchFilterContext();
 
   const { keyword, genre, rating } = searchFilterState;
@@ -17,7 +16,8 @@ export default function SearchResult({ movies }) {
             {
               movies
                 .filter(({ title }) => title.toLowerCase().includes(keyword.toLowerCase()))
-                .filter(({ rating }) => rating >= searchFilterState.rating)
+                .filter(({ rating }) => rating >= searchFilterState.rating || searchFilterState.rating === 'Any rating')
+                .filter(({ genre }) => genre === searchFilterState.genre || searchFilterState.genre === 'Any genre')
                 .map(({ title, genre, id, rating }) => (
                   <div
                     key={id}
