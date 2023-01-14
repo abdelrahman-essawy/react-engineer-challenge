@@ -8,7 +8,7 @@ export const searchFilterReducer = (state, action) => {
         case 'SET_RATING':
             return {
                 ...state,
-                rating: action.payload,
+                rating: parseInt(action.payload),
             };
         case 'SET_GENRE':
             return {

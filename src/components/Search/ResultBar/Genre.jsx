@@ -21,15 +21,15 @@ export default function Genre() {
           <div className='flex flex-col gap-2'>
             {
               uniqueGenres
-                .map((genre, i) => (
+                .map((genre, id) => (
                   <div
-                    key={i}
+                    key={id}
                     className="flex flex-row items-center gap-3 md:gap-2 lg:gap-4">
                     <input
                       onChange={(event) => {
                         searchFilterDispatch({ type: 'SET_GENRE', payload: event.target.value });
                       }}
-                      type="radio" name='Genres' className="w-4 h-4 cursor-pointer accent-black" value={genre} />
+                      type="radio" name='Genres' className="w-4 h-4 cursor-pointer accent-black" value={genre} defaultChecked={genre === 'Any genre' ? true : false} />
                     <span className="flex-1">{genre}</span>
                   </div>
                 ))

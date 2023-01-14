@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import SearchBar from "./SearchBar";
 import SearchResults from "./ResultBar";
 import { useMoviesContext } from "../../context/hooks/useMoviesContext";
+import StarRating from "../utilities/StarRating";
 
 
 const Search = () => {
@@ -33,9 +34,7 @@ const Search = () => {
                 <SearchResults />
             </div>
 
-
         </div>
-
 
     );
 };

@@ -2,7 +2,7 @@ import React from 'react'
 import { useSearchFilterContext } from '../../../context/hooks/useSearchFilterContext';
 import { useToggleContext } from '../../../context/hooks/useToggleContext';
 import Border from '../../utilities/Border'
-import Stars from '../../utilities/Stars'
+import StarRating from '../../utilities/StarRating'
 
 export default function Rating() {
 
@@ -22,8 +22,8 @@ export default function Rating() {
                                     onChange={(event) => {
                                         searchFilterDispatch({ type: 'SET_RATING', payload: event.target.value });
                                     }}
-                                    type="radio" name='Ratings' className="w-4 h-4 cursor-pointer accent-black" value={i} />
-                                <span className="flex-1"><Stars rating={i} /></span>
+                                    type="radio" name='Ratings' className="w-4 h-4 cursor-pointer accent-black" value={i} defaultChecked={i === 0 ? true : false} />
+                                <span className="flex-1"><StarRating rating={i} /></span>
                             </div>
                         ))
                     }
