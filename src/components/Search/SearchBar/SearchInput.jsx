@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useSearchContext } from "../../../context/hooks/useSearchContext";
+import { useMoviesContext } from "../../../context/hooks/useMoviesContext";
 import Border from "../../utilities/Border";
 
 const SearchInput = () => {
     const [searchKeyword, setSearchKeyword] = useState("");
-
-    const [movies, setMovies] = useState([]);
-    const { state, dispatch } = useSearchContext()
-
-
+    const { state } = useMoviesContext();
+    console.log(state);
 
     return (
         <Border>

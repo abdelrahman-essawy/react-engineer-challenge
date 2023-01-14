@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { SearchContext } from './context/SearchContext';
+import { MoviesContext } from './context/MoviesContext';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <SearchContext.Provider>
+    <MoviesContext.Provider>
 
         <App />
-    </SearchContext.Provider>
+    </MoviesContext.Provider>
 );

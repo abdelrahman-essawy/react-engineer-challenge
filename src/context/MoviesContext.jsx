@@ -3,20 +3,20 @@ import { moviesReducer } from './reducers/moviesReducer';
 
 
 
-export const SearchContext = createContext();
+export const MoviesContext = createContext();
 
-export const SearchProvider = ({ children }) => {
+export const MoviesProvider = ({ children }) => {
 
 
     const [state, dispatch] = useReducer(moviesReducer, {
         movies: [],
         rating: 0,
         genre: '',
-        });
+    });
 
     return (
-        <SearchContext.Provider value={{ state, dispatch }}>
+        <MoviesContext.Provider value={{ state, dispatch }}>
             {children}
-        </SearchContext.Provider>
+        </MoviesContext.Provider>
     );
 }
