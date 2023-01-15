@@ -2,7 +2,7 @@ import React from 'react';
 import { useSearchFilterContext } from '../../../context/hooks/useSearchFilterContext';
 import { useToggleContext } from '../../../context/hooks/useToggleContext';
 import StyledBorder from '../../utilities/StyledBorder'
-import StarRating from '../../utilities/StarRatingDisplay'
+import StarRating from '../../utilities/DisplayStars'
 
 const Rating = () => {
     const { dispatch: searchFilterDispatch } = useSearchFilterContext();

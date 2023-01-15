@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSearchFilterContext } from '../../../context/hooks/useSearchFilterContext';
 import StyledBorder from '../../utilities/StyledBorder';
-import StarRating from '../../utilities/StarRatingDisplay';
+import StarRating from '../../utilities/DisplayStars';
 
 const SearchResult = ({ movies }) => {
   const { state: searchFilterState } = useSearchFilterContext();

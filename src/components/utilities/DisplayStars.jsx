@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 import HalfStar from '../../SVG/HalfStar';
 import Star from '../../SVG/Star';
 
-const StarRatingDisplay = ({ rating }) => {
+const DisplayStars = memo(({ rating }) => {
     const stars = [];
 
     let rate = Math.floor(rating)
@@ -31,6 +31,6 @@ const StarRatingDisplay = ({ rating }) => {
         }
 
     </div>
-};
+});
 
-export default StarRatingDisplay;
+export default DisplayStars;
