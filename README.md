@@ -1,68 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Engineer Challenge
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+The application is a React application that loads data from a JSON file and displays it in a tabular format.
+The application uses functional components, custom hooks and react hooks, such as `useState` and `useEffect`, to handle the state and fetching data from the API. It uses `fetch` to fetch data from a local json file.
 
-### `npm start`
+#### Pure React 18 and Tailwind CSS for styling.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- The user is allowed to type movie name and it will auto complete for him.
+- The user can select the desired rating and genre in bullet points format.
+- The user can filter the result based on the name and the rating and genre selected.
 
-### `npm test`
+## Folder Structure
+```
+src
+|__components
+  |__Search       
+    |__FilterBar     # contains all the components that the user will interact with at the initial state.
+    |__ResultBar     # contains all the components that will be displayed depending on the user input.
+  |__utilities       # contains all the Styled and reusable components. 
+|__context           # contains all the context, reducers and custom hooks related to the context.
+|__index.js
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+public
+|__moviesData.json
+```
+## Technical Overview
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- The application uses functional components and hooks, such as `useState` and `useEffect`, to handle the state and fetching data.
+- The application uses `fetch` to fetch data from a local json file.
+- The application uses 3 contexts (`MoviesContext`, `SearchFilterContext`, and `toggleContext`) to manage the state of different parts of the application, and custom hooks `useMoviesContext`, `useSearchFilterContext` and `useToggleContext` for readability and easier debugging
+- The application uses `Memo` for some components to reduce unnecessary re-rendering
+- The application has a scalable folder structure, with reusable components in the `/utilities` folder and reusable styled components to ensure consistency in the website's style.
+- The application has a well-structured component folder with a `search` folder that contains a `FilterBar` folder and a `ResultBar` folder. The `FilterBar` folder contains all the components responsible for the controllers that the user will interact with at the initial state, and the `ResultBar` folder contains all the components that will be displayed depending on the user input. This structure allows for more scalability without making the components depend on each other.
