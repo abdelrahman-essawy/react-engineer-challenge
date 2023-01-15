@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import SearchBar from "./SearchBar";
+import SearchBar from "./FilterBar";
 import SearchResults from "./ResultBar";
 import { useMoviesContext } from "../../context/hooks/useMoviesContext";
 
