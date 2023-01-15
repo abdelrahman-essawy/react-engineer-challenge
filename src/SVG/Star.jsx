@@ -3,7 +3,7 @@ import React from 'react';
 const Star = ({ color = 'white', width = 5, height = 5 }) => {
     if (color === 'white') return <svg
         className={`w-${width} h-${height}`}
-        version={1.0} xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" viewBox="0 0 980.000000 944.000000" preserveAspectRatio="xMidYMid meet">
+        version={1.0} xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 980.000000 944.000000" preserveAspectRatio="xMidYMid meet">
         <g transform="translate(0.000000,944.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
             <path d="M4805 9430 c-255 -28 -494 -170 -634 -378 -35 -53 -284 -551 -937
 -1877 -82 -167 -130 -230 -217 -286 -95 -62 -145 -74 -477 -123 -173 -25 -657
@@ -41,7 +41,7 @@ const Star = ({ color = 'white', width = 5, height = 5 }) => {
     return <svg
         className={`w-${width} h-${height}`}
         version={1.0} xmlns="http://www.w3.org/2000/svg"
-        width={`${width}px`} height={`${height}px`}
+        width={`16px`} height={`16px`}
         viewBox="0 0 980.000000 940.000000" preserveAspectRatio="xMidYMid meet"
     >
         <g transform="translate(0.000000,940.000000) scale(0.100000,-0.100000)" fill={color}>
