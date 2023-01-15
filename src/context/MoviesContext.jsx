@@ -6,14 +6,7 @@ export const MoviesContext = createContext();
 export const MoviesProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(moviesReducer, {
-        movies: [
-            {
-                id: 0,
-                title: ``,
-                rating: 0,
-                genre: ``,
-            }
-        ]
+        movies: []
     });
     return <MoviesContext.Provider value={{ state, dispatch }}>
         {children}
