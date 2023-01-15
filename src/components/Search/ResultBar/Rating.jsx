@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useSearchFilterContext } from '../../../context/hooks/useSearchFilterContext';
 import { useToggleContext } from '../../../context/hooks/useToggleContext';
 import StyledBorder from '../../utilities/StyledBorder'
-import StarRating from '../../utilities/DisplayStars'
+import DisplayStars from '../../utilities/DisplayStars'
 
 const Rating = () => {
     const { dispatch: searchFilterDispatch } = useSearchFilterContext();
@@ -22,7 +22,7 @@ const Rating = () => {
                                         searchFilterDispatch({ type: 'SET_RATING', payload: i });
                                     }}
                                     type="radio" className="w-4 h-4 cursor-pointer accent-black" value={i} defaultChecked={i === 0 ? true : false} />
-                                <label htmlFor={`Rating ${i}`} className="flex-1 cursor-pointer"><StarRating rating={i} /></label>
+                                <label htmlFor={`Rating ${i}`} className="flex-1 cursor-pointer"><DisplayStars rating={i} /></label>
                             </div>
                         ))
                     }

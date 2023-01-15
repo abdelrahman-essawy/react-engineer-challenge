@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSearchFilterContext } from '../../../context/hooks/useSearchFilterContext';
 import StyledBorder from '../../utilities/StyledBorder';
-import StarRating from '../../utilities/DisplayStars';
+import DisplayStars from '../../utilities/DisplayStars';
 
 const SearchResult = ({ movies }) => {
   const { state: searchFilterState } = useSearchFilterContext();
@@ -24,7 +24,7 @@ const SearchResult = ({ movies }) => {
                   <span className="sm:text-sm md:text-lg font-medium text-gray-900">{title}</span>
                   <span className="sm:text-sm md:text-lg text-gray-600 place-self-end">{genre}</span>
                   <span className="pr-4">
-                    <StarRating rating={rating} />
+                    <DisplayStars rating={rating} />
                   </span>
                 </div>
               ))
