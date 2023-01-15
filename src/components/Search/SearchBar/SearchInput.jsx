@@ -1,12 +1,12 @@
 import React from "react";
 import { useSearchFilterContext } from "../../../context/hooks/useSearchFilterContext";
-import Border from "../../utilities/Border";
+import StyledBorder from "../../utilities/StyledBorder";
 
 const SearchInput = () => {
     const { dispatch } = useSearchFilterContext();
 
     return (
-        <Border>
+        <StyledBorder>
             <input
                 onChange={(event) => {
                     dispatch({ type: 'SET_KEYWORD', payload: event.target.value });
@@ -14,7 +14,7 @@ const SearchInput = () => {
                 placeholder="Enter movie name"
                 className="outline-none w-full"
             />
-        </Border>
+        </StyledBorder>
     );
 };
 export default SearchInput;

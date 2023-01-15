@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSearchFilterContext } from '../../../context/hooks/useSearchFilterContext';
 import { useToggleContext } from '../../../context/hooks/useToggleContext';
-import Border from '../../utilities/Border'
-import StarRating from '../../utilities/StarRating'
+import StyledBorder from '../../utilities/StyledBorder'
+import StarRating from '../../utilities/StarRatingDisplay'
 
 const Rating = () => {
     const { dispatch: searchFilterDispatch } = useSearchFilterContext();
@@ -10,7 +10,7 @@ const Rating = () => {
 
     return (
         <div className={`col-span-2 ${toggleState.rating ? `block` : `hidden`}`}>
-            <Border>
+            <StyledBorder>
                 <div className='flex flex-col gap-2'>
                     {
                         [...Array(11)].map((_, i) => (
@@ -27,7 +27,7 @@ const Rating = () => {
                         ))
                     }
                 </div>
-            </Border>
+            </StyledBorder>
         </div>
     );
 }

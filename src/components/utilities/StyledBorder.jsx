@@ -1,10 +1,10 @@
 import React from "react";
 
-const Border = ({ children, className }) => {
+const StyledBorder = ({ children, className }) => {
     return (
         <div className={`border border-solid border-black text-start px-4 py-3 ${className}`}>
             {children}
         </div>
     );
 };
-export default Border;
+export default StyledBorder;

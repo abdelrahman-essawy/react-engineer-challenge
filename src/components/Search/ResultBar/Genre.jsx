@@ -2,7 +2,7 @@ import React from 'react'
 import { useMoviesContext } from '../../../context/hooks/useMoviesContext';
 import { useSearchFilterContext } from '../../../context/hooks/useSearchFilterContext';
 import { useToggleContext } from '../../../context/hooks/useToggleContext';
-import Border from '../../utilities/Border';
+import StyledBorder from '../../utilities/StyledBorder';
 
 const Genre = () => {
   const { state: toggleState } = useToggleContext();
@@ -15,7 +15,7 @@ const Genre = () => {
 
   return (
     <div className={`col-span-1 ${toggleState.genre ? `block` : `hidden`}`}>
-      <Border>
+      <StyledBorder>
         <div className='flex flex-col gap-2'>
           {
             uniqueGenres
@@ -33,7 +33,7 @@ const Genre = () => {
               ))
           }
         </div>
-      </Border>
+      </StyledBorder>
     </div>
   );
 }

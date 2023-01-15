@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSearchFilterContext } from '../../../context/hooks/useSearchFilterContext';
-import Border from '../../utilities/Border';
-import StarRating from '../../utilities/StarRating';
+import StyledBorder from '../../utilities/StyledBorder';
+import StarRating from '../../utilities/StarRatingDisplay';
 
 const SearchResult = ({ movies }) => {
   const { state: searchFilterState } = useSearchFilterContext();
@@ -12,7 +12,7 @@ const SearchResult = ({ movies }) => {
 
   return (
     <div className={`col-span-1 ${keyword ? `block` : `hidden`}`}>
-      <Border>
+      <StyledBorder>
         <div className="flex flex-col gap-4">
           {movies.filter(filteredMovies).length === 0 ? (
             <p>Not found</p>
@@ -30,7 +30,7 @@ const SearchResult = ({ movies }) => {
               ))
           )}
         </div>
-      </Border>
+      </StyledBorder>
     </div>
   );
 };
