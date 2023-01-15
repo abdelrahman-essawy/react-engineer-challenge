@@ -6,16 +6,18 @@ import DisplayStars from '../../utilities/DisplayStars';
 const SearchResult = ({ movies }) => {
   const { state: searchFilterState } = useSearchFilterContext();
   const { keyword } = searchFilterState;
-  const filteredMovies = ({ title, rating }) =>
+  const filteredMovies = ({ title, rating, genre }) =>
     title.toLowerCase().includes(keyword.toLowerCase()) &&
-    (rating === parseInt(searchFilterState.rating) || parseInt(searchFilterState.rating) === 0);
+    (rating === parseInt(searchFilterState.rating) || parseInt(searchFilterState.rating) === 0) &&
+    (searchFilterState.genre.includes('Any genre') || searchFilterState.genre.includes(genre));
+  console.log(searchFilterState);
 
   return (
     <div className={`col-span-1 ${keyword ? `block` : `hidden`}`}>
       <StyledBorder>
         <div className="flex flex-col gap-4">
           {movies.filter(filteredMovies).length === 0 ? (
-            <p>Not found</p>
+            <p className='text-gray-600'>Not found</p>
           ) : (
             movies
               .filter(filteredMovies)

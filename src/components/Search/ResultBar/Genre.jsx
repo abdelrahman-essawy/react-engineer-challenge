@@ -8,8 +8,8 @@ const Genre = () => {
   const { state: toggleState } = useToggleContext();
   const { state: moviesState } = useMoviesContext();
   const { dispatch: searchFilterDispatch } = useSearchFilterContext();
-
   const { movies } = moviesState;
+  console.log(movies);
 
   const uniqueGenres = ['Any genre', ...new Set(movies.map(({ genre }) => genre))]
 
@@ -24,10 +24,13 @@ const Genre = () => {
                   <input
                     name='Genres'
                     id={`Genre ${id}`}
-                    onChange={() => {
-                      searchFilterDispatch({ type: 'SET_GENRE', payload: genre });
+                    onChange={(e) => {
+                      e.target.checked ?
+                        searchFilterDispatch({ type: 'SET_GENRE', payload: genre })
+                        :
+                        searchFilterDispatch({ type: 'REMOVE_GENRE', payload: genre })
                     }}
-                    type="radio" className="w-4 h-4 cursor-pointer accent-black" value={genre} defaultChecked={genre === 'Any genre' ? true : false} />
+                    type="checkbox" className="w-4 h-4 cursor-pointer accent-black" value={genre} defaultChecked={genre === 'Any genre' ? true : false} />
                   <label htmlFor={`Genre ${id}`} className="flex-1 cursor-pointer">{genre}</label>
                 </div>
               ))

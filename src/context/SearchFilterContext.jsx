@@ -8,7 +8,7 @@ export const SearchFilterProvider = ({ children }) => {
     const [state, dispatch] = useReducer(searchFilterReducer, {
         keyword: ``,
         rating: 0,
-        genre: `Any genre`,
+        genre: [`Any genre`],
     });
     return <SearchFilterContext.Provider value={{ state, dispatch }}>
         {children}

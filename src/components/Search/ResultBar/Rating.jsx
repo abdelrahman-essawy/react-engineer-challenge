@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { useSearchFilterContext } from '../../../context/hooks/useSearchFilterContext';
 import { useToggleContext } from '../../../context/hooks/useToggleContext';
 import StyledBorder from '../../utilities/StyledBorder'

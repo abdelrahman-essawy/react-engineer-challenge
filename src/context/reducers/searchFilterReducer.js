@@ -10,10 +10,23 @@ export const searchFilterReducer = (state, action) => {
                 ...state,
                 rating: parseInt(action.payload),
             };
+        case 'REMOVE_RATING':
+            return {
+                ...state,
+                genre: [parseInt(...state.rating.filter((rating) => rating !== action.payload))]
+            };
         case 'SET_GENRE':
             return {
                 ...state,
-                genre: action.payload,
+                genre: [
+                    ...state.genre,
+                    action.payload,
+                ]
+            };
+        case 'REMOVE_GENRE':
+            return {
+                ...state,
+                genre: [...state.genre.filter((genre) => genre !== action.payload)]
             };
 
         default:
