@@ -8,7 +8,7 @@ const SearchResult = ({ movies }) => {
   const { keyword } = searchFilterState;
   const filteredMovies = ({ title, rating, genre }) =>
     title.toLowerCase().includes(keyword.toLowerCase()) &&
-    (rating === parseInt(searchFilterState.rating) || parseInt(searchFilterState.rating) === 0) &&
+    (rating >= parseInt(searchFilterState.rating) || parseInt(searchFilterState.rating) === 0) &&
     (searchFilterState.genre.includes('Any genre') || searchFilterState.genre.includes(genre));
   console.log(searchFilterState);
 
