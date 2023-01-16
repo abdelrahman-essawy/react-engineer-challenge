@@ -19,8 +19,8 @@ The application uses functional components, custom hooks and react hooks, such a
 src
 |__components
   |__Search       
-    |__FilterBar     # contains all the components that the user will interact with at the initial state.
-    |__ResultBar     # contains all the components that will be displayed depending on the user input.
+  | |__FilterBar     # contains all the components that the user will interact with at the initial state.
+  | |__ResultBar     # contains all the components that will be displayed depending on the user input.
   |__utilities       # contains all the Styled and reusable components. 
 |__context           # contains all the context, reducers and custom hooks related to the context.
 |__index.js
