@@ -10,8 +10,9 @@ The application uses functional components, custom hooks and react hooks, such a
 ## Features
 
 - The user is allowed to type movie name and it will auto complete for him.
-- The user can select the desired rating and genre in bullet points format.
 - The user can filter the result based on the name and the rating and genre selected.
+- The Application will display all the movies with higher rating than selected.
+- The Application will display all the movies that matches the genres selected.
 - The Application is responsive.
 
 ## Folder Structure
